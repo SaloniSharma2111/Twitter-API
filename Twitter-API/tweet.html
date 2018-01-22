@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Tweet Saver</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/tweet-saver.css">
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+        <div class="page-header">
+        <h2>Tweet Saver <img src="./images/twitter_icon.png" id="icon"/></h2>
+        
+        </div>
+            </div>
+            <div class="row">
+        <input type=text placeholder='Search Tweets' id="searchtext" maxlength="1000"/><span><button type="button" id="SearchTwitter"> <i class="fa fa-search"></i> Search</button>
+        </div>
+        <div class="row padding-30">
+        <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+        
+        <div id = 'twitterFeed' class="col-sm-6 col-md-6 col-lg-6">
+          <table id="twitterFeedRows">
+            <thead>
+                <tr>
+                <th>Searched Tweets</th>
+                <span>(To Save- Drag tweet and drop in Saved Tweets section)</span>
+                </tr>
+            </thead>
+            <tbody class=scrollable>
+                <tr></tr>                
+            </tbody>
+            </table>
+        </div>
+        
+        <div class="col-sm-6 col-md-6" id="twitterSavedFeed">
+            <table id="twitterFeedSavedRows" class="table-responsive">
+                <thead>
+                    <tr>
+                    <th>Saved Tweets</th>
+                    </tr>
+                    </thead>
+                    <tbody id="savedFeeds" ondrop="drop(event)" ondragover="allowDrop(event)" class="saveScroll">
+                        
+                    </tbody>
+            </table>   
+        </div>
+        </div>
+        </div>
+        <input type="hidden" name="allSavedTweets" id="allSavedTweets"/>
+        <script type="text/javascript" src="./scripts/twitter-saver.js"></script>
+        <!--Script to intitially load data from twitter (Searching most recent 10 tweets on Google)-->
+        <script type="text/javascript" src="http://tweetsaver.herokuapp.com/?q=google&callback=myCallback&count=10"></script>
+    </body>
+</html>

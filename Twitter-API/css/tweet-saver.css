@@ -1,0 +1,40 @@
+            a{
+                text-decoration: none;
+            }
+
+            img{
+                border-radius:20px;
+            }
+
+            .scrollable{
+                max-height:500px;
+                overflow-y:auto;
+                display:block;
+                min-width: 500px;
+                background-color: aliceblue;
+            }
+
+            .saveSCroll{
+                height:500px;
+                width:500px;
+                background-color:aliceblue;
+                display:inline-block; 
+                max-height:505px;
+                overflow-y:auto;
+            }
+
+            #icon{
+                width:5%;
+            }
+
+            .page-header{
+                background-color: rgb(29, 161, 242);
+            }
+
+            h2{
+                color:white;
+            }
+
+            .padding-30{
+                padding-top: 30px;
+            }
